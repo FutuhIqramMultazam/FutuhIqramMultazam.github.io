@@ -38,7 +38,7 @@
       }
       .open-button {
         padding: 10px 10px;
-        font-size: 16px;
+        font-size: 13px;
         color: white;
         background-color: grey; /* Warna biru khas Google */
         border: none;
@@ -105,6 +105,10 @@
         var audio = document.getElementById("myAudio");
         audio.play();
         this.style.display = "none"; // Menghilangkan tombol setelah diklik
+
+        // Melakukan scroll ke bawah secara otomatis
+        var container = document.querySelector(".container");
+        container.scrollIntoView({ behavior: "smooth" });
       });
     </script>
   </body>
