@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Futuh & Fadilah</title>
+    <link rel="stylesheet" href="fonts-google.css" />
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+      }
+      body {
+        background-color: black;
+      }
+      .container {
+        max-width: 576px;
+        margin: auto;
+        position: relative;
+      }
+      .container img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .button-container {
+        position: absolute;
+        top: 80.3%;
+        left: 35.6%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+      .maps-button {
+        padding: 9px 9px;
+        font-size: 12px;
+        color: white;
+        background-color: #4285f4; /* Warna biru khas Google */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        font-family: "work sans";
+      }
+      .maps-button:hover {
+        background-color: #357ae8; /* Warna biru lebih gelap saat hover */
+      }
+      .maps-button:active {
+        background-color: #2364cc; /* Warna biru lebih gelap saat hover */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Menambahkan audio autoplay -->
+    <audio autoplay loop>
+      <source src="audio_wd.mp3" type="audio/mp3" />
+    </audio>
+
+    <div class="container">
+      <img src="1.png" alt="Gambar" />
+      <div class="img-wrapper">
+        <img src="2.png" alt="Gambar" />
+        <div class="button-container">
+          <a href="https://maps.app.goo.gl/Nz3fT48gPcwqQapXA" class="maps-button" target="_blank">Buka di Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
