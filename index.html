@@ -38,7 +38,7 @@
       }
       .open-button {
         padding: 10px 10px;
-        font-size: 13px;
+        font-size: 16px;
         color: white;
         background-color: grey; /* Warna biru khas Google */
         border: none;
@@ -76,6 +76,17 @@
       .maps-button:active {
         background-color: #2364cc; /* Warna biru lebih gelap saat hover */
       }
+
+      /* div untuk tujuan scroll */
+      .scroll-target {
+        visibility: hidden;
+        height: 1px;
+        position: absolute;
+        top: 25%;
+        left: 35.6%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
     </style>
   </head>
   <body>
@@ -83,7 +94,7 @@
     <audio id="myAudio" src="audio_wd.mp3">Your browser does not support the audio element.</audio>
 
     <div class="container">
-      <img id="1" src="1.png" alt="Gambar" />
+      <img src="1.png" alt="Gambar" />
       <img src="2.png" alt="Gambar" />
 
       <div class="img-wrapper">
@@ -93,22 +104,24 @@
         </div>
 
         <!-- button for open maps -->
-        <div class="button-container">
+        <div id="2" class="button-container">
           <a href="https://maps.app.goo.gl/Nz3fT48gPcwqQapXA" class="maps-button" target="_blank">Buka di Google Maps</a>
         </div>
+        <div id="scrollTarget" class="scroll-target"></div>
       </div>
     </div>
 
+    <!-- div transparan di bawah halaman -->
+
     <!-- script javascript -->
     <script>
-      document.getElementById("openButton").addEventListener("click", function () {
+      document.getElementById("openButton").addEventListener("click", function (event) {
         var audio = document.getElementById("myAudio");
         audio.play();
         this.style.display = "none"; // Menghilangkan tombol setelah diklik
 
-        // Melakukan scroll ke bawah secara otomatis
-        var container = document.querySelector(".container");
-        container.scrollIntoView({ behavior: "smooth" });
+        // Scroll lembut ke div dengan id "scrollTarget"
+        document.getElementById("scrollTarget").scrollIntoView({ behavior: "smooth" });
       });
     </script>
   </body>
